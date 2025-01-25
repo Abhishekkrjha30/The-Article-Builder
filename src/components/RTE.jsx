@@ -19,8 +19,8 @@ export default function RTE({name , control , label , defaultValue=""}) {
             initialValue: defaultValue,
             height: 500,
             menubar: true,
-            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
-        toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+            plugins: 'autolink lists link charmap print preview anchor searchreplace wordcount',
+            toolbar: 'undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent',
       
         }}
         onEditorChange={onChange}
