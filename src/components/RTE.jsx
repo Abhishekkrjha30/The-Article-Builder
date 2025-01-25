@@ -13,16 +13,24 @@ export default function RTE({name , control , label , defaultValue=""}) {
            control={control}
            render={({field:{onChange}})=>(
             <Editor
-            apiKey={import.meta.env.VITE_TINYMCE_API_KEY}
+            // apiKey={import.meta.env.VITE_TINYMCE_API_KEY}
         initialValue={defaultValue}
+
+        apiKey='6h3e9phwual7zpbskkjlkv928s595jlw9ae24ma3ahv3syee'
         init={{
-            initialValue: defaultValue,
-            height: 500,
-            menubar: true,
-            plugins: 'autolink lists link charmap print preview anchor searchreplace wordcount',
-            toolbar: 'undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent',
-      
+          height:500,
+          menubar: true,
+          plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+          toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
         }}
+        // init={{
+        //     initialValue: defaultValue,
+        //     height: 500,
+        //     menubar: true,
+        //     plugins: 'autolink lists link charmap print preview anchor searchreplace wordcount',
+        //     toolbar: 'undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent',
+      
+        // }}
         onEditorChange={onChange}
         />
            )}
